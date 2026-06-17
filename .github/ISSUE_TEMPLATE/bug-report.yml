@@ -1,0 +1,27 @@
+name: Bug report
+description: Report unclear, unsafe, or incorrect ReproProof behavior.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue
+      description: What is wrong or misleading?
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: File, section, prompt, or example where the issue appears.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix
+      description: If you have a specific wording or behavior change, describe it.
+    validations:
+      required: false

@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest a focused improvement to the ReproProof skill, templates, or examples.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What reproducibility-audit problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: Describe the skill, checklist, template, or example change.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope boundary
+      description: What should ReproProof still avoid doing?
+      placeholder: For example, it should not run experiments or rewrite the paper.
+    validations:
+      required: false

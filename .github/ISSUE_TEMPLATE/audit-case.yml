@@ -1,0 +1,32 @@
+name: Share an audit case
+description: Share a paper, report, or artifact-audit scenario ReproProof should handle better.
+title: "[Case]: "
+labels:
+  - audit-case
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share only public or sanitized material. Do not paste private drafts, confidential reviews, credentials, or restricted datasets.
+  - type: textarea
+    id: artifact
+    attributes:
+      label: Artifact type
+      description: What kind of material is being audited?
+      placeholder: Paper draft, benchmark report, README + code, artifact evaluation package, thesis chapter...
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Audit goal
+      description: What should ReproProof catch or improve for this case?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected output
+      description: What would a useful audit report include?
+    validations:
+      required: false
