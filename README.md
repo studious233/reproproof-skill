@@ -1,6 +1,6 @@
 # ReproProof Skill
 
-ReproProof is a lightweight agent skill for auditing research claims, evidence boundaries, and reproducibility readiness before paper submission, thesis defense, benchmark release, or artifact publication.
+ReproProof is a lightweight, portable agent skill for auditing research claims, evidence boundaries, and reproducibility readiness before paper submission, thesis defense, benchmark release, or artifact publication.
 
 It helps answer one practical question:
 
@@ -25,16 +25,14 @@ The core output is an **Evidence Boundary Ledger**: a claim-by-claim record of w
 
 ```text
 .
-|-- .cursor/
-|   `-- skills/
-|       `-- reproproof/
-|           |-- SKILL.md
-|           |-- README.md
-|           |-- references/
-|           |   |-- audit-scope-routing.md
-|           |   `-- reproducibility-checklist.md
-|           `-- templates/
-|               `-- audit-report.md
+|-- reproproof/
+|   |-- SKILL.md
+|   |-- README.md
+|   |-- references/
+|   |   |-- audit-scope-routing.md
+|   |   `-- reproducibility-checklist.md
+|   `-- templates/
+|       `-- audit-report.md
 |-- docs/
 |   |-- comparison.md
 |   `-- release-checklist.md
@@ -52,20 +50,27 @@ The core output is an **Evidence Boundary Ledger**: a claim-by-claim record of w
 
 ## Install
 
-### Project-level Cursor install
+### Generic install
 
-Copy or keep the `.cursor` directory at the root of a project:
+Copy the `reproproof/` directory into any agent runtime or project that supports skill-style folders with a `SKILL.md` entry point.
 
 ```text
-your-project/
-`-- .cursor/
-    `-- skills/
-        `-- reproproof/
+skills/
+`-- reproproof/
+    |-- SKILL.md
+    |-- references/
+    `-- templates/
 ```
 
-### Personal install
+### Cursor-compatible install
 
-Copy the skill folder into your personal Cursor skills directory:
+For Cursor-style project installation, copy `reproproof/` to:
+
+```text
+your-project/.cursor/skills/reproproof/
+```
+
+For personal installation, copy it to:
 
 ```text
 ~/.cursor/skills/reproproof/
@@ -95,7 +100,7 @@ Quick audits include:
 4. Missing reproduction details
 5. Immediate fixes
 
-Full audits follow `.cursor/skills/reproproof/templates/audit-report.md` and include:
+Full audits follow `reproproof/templates/audit-report.md` and include:
 
 - Executive summary
 - Audit boundary

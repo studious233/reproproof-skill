@@ -107,13 +107,19 @@ Its value is narrow by design: check whether claims are bounded by evidence and 
 
 ## Installation
 
-For Cursor project-level use, place this directory at:
+For a generic agent runtime, place this directory wherever that runtime loads skill folders from:
+
+```text
+skills/reproproof/
+```
+
+For Cursor-style project-level use, place this directory at:
 
 ```text
 .cursor/skills/reproproof/
 ```
 
-For personal use across projects, place it at:
+For Cursor-style personal use across projects, place it at:
 
 ```text
 ~/.cursor/skills/reproproof/

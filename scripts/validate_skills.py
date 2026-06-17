@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILLS_DIR = ROOT / ".cursor" / "skills"
+SKILLS_DIR = ROOT
 REQUIRED_ROOT_FILES = [
     "README.md",
     "LICENSE",
@@ -103,12 +103,9 @@ def main() -> int:
         if not (ROOT / filename).exists():
             fail(f"missing required root file: {filename}")
 
-    if not SKILLS_DIR.exists():
-        fail(".cursor/skills does not exist")
-
-    skill_dirs = [path for path in SKILLS_DIR.iterdir() if path.is_dir()]
+    skill_dirs = [ROOT / "reproproof"]
     if not skill_dirs:
-        fail("no skills found under .cursor/skills")
+        fail("no skills found")
 
     for skill_dir in skill_dirs:
         validate_frontmatter(skill_dir)
